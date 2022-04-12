@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import saluda, part2, saluda_nombre
+from .views import saluda, part2, saluda_nombre_edad, probandoTemplate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', saluda),
     path('saludar2/', part2),
-    path('saludar-nombre/<nombre>', saluda_nombre)
+    path('template-2/<nombre>/<edad>', saluda_nombre_edad),
+    path('template-1/<nombre>', probandoTemplate)
 ]
